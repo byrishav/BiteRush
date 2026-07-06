@@ -3,8 +3,10 @@
 <style>
        body
 	   {
-            background:#f5f5f5;
+            background:#fff7f8;
 		 font-family:'Poppins',sans-serif;
+		  margin:0;
+             padding:0;
 	    }
 	 .restraugrid
 	 {
@@ -16,12 +18,20 @@
 	 }
 	 .restraucards
 	 {
-	      background:white;
+	      background:
+            linear-gradient(
+            180deg,
+            #ffffff,
+            #fff9fa
+            );
 		 border-radius:20px;
-		  box-shadow:0 8px 25px rgba(0,0,0,0.12);
+		  box-shadow:
+             0 10px 30px rgba(0,0,0,0.06),
+             0 2px 8px rgba(0,0,0,0.04);
 		  cursor:pointer;
 		  overflow:hidden;
 		  transition:all .35s ease;
+		  border:1px solid rgba(226,55,68,0.08);
 	 }
 	 .restraucards:hover img{
 	  transform:scale(1.08);
@@ -52,11 +62,19 @@
 	}
 	.rating
 	{
-	 background:#0f7a3f;
+	 
 	 border-radius:10px;
 	 color:white;
 	 padding:5px 12px;
 	 font-weight:700;
+	  background:
+    linear-gradient(
+    135deg,
+    #ff6b7a,
+    #e23744
+    );
+
+    color:white;
 	}
 	 .cuisine
 	 {
@@ -70,7 +88,7 @@
 	 {
 	 margin-top:10px;
        color:#888;
-	   ont-size:14px;
+	
 	 }
 	.bottom
 	{
@@ -78,22 +96,2139 @@
 	display:flex;
 	justify-content:space-between;
 	}
-     .status
-	 {
-	  color: #10B981;
-        font-weight:600;
-	 }
+    .status
+{
+    color:#e23744;
+    font-weight:700;
+}
 	 .distance
 	 {
 	  font-weight:600;
 	  color:black;
 	 }
+	 
+	 /*                                                  code for searchbar css                                                            */
+/* ==========================
+   PREMIUM NAVBAR - BITERUSH
+   ========================== */
+
+.searchbar
+{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+    min-height:90px;
+
+    padding:0 80px;
+
+    background:#ffffff;
+
+    border-bottom:1px solid #ececec;
+
+    box-sizing:border-box;
+}
+
+/* LOGO */
+
+.logo
+{
+
+font-family: 'Poppins', sans-serif;
+font-size:48px;
+font-weight:900;
+letter-spacing:-2px;
+color:#8f1724;
+cursor:pointer;
+display:inline-block;
+text-transform:capitalize;
+text-shadow:
+0px 2px 8px rgba(226,55,68,0.25);
+transition:0.3s;
+user-select:none;
+}
+
+
+.logo:hover
+{
+    opacity:.85;
+}
+
+.rush
+{
+  color:black;
+margin-left:-9px;
+
+font-style:italic;
+transform:skew(-8deg);
+
+}
+
+/* SEARCH CONTAINER */
+
+.searchb
+{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+
+    padding:0 50px;
+}
+
+/* SEARCH BOX */
+
+.searchf
+{
+    width:100%;
+    max-width:550px;
+
+    height:54px;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    background:#f8fafc;
+
+    padding:0 22px;
+
+    font-size:15px;
+
+    color:#111827;
+
+    outline:none;
+
+    transition:.25s ease;
+
+    box-sizing:border-box;
+}
+
+.searchf::placeholder
+{
+    color:#6b7280;
+}
+
+.searchf:focus
+{
+    background:white;
+
+    border-color:#d1d5db;
+}
+
+/* RIGHT SECTION */
+
+.authbox
+{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* LOGIN */
+
+.loginbtn
+{
+   display:flex;
+   align-items:center;
+    height:40px;
+    border-radius:40px;
+    height:48px;
+    padding:0 24px;
+    border:1px solid #d1d5db;
+    background:white;
+    color:#111827;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.25s ease;
+}
+
+.logo::before{
+content:"🍔";
+font-size:48px;
+position:relative;
+top:-5px;
+left:5px;
+}
+
+.loginbtn:hover
+{
+    background:#f9fafb;
+}
+
+/* SIGN IN */
+
+.loginbtn1
+{
+display:flex;
+align-items:center;
+    height:40px;
+
+    border-radius:30px;
+background: linear-gradient(135deg, #FFD1DC, #FF9EB5, #FF6F91);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s ease;
+	padding: 5px 23px;
+}
+
+.loginbtn1:hover
+{
+    background:#991b1b;
+}
+
+
+
+.cartbtn
+{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    border-radius:50%;
+    transition:all .3s ease;
+	  
+}
+
+.cartbtn:hover
+{
+    transform:
+    translateY(-4px)
+    scale(1.08);
+}
+.cartbtn img
+{
+    transition:all .3s ease;
+}
+
+.cartbtn:hover img
+{
+    transform:scale(1.12) rotate(-8deg);
+}
+
+ /*                                                  code for popular food items css                                                            */
+ 
+ .foodsection
+ {
+   display:grid;
+   grid-template-columns:repeat(4,1fr);
+   max-width:1200px;
+   margin:auto;
+   gap:20px;
+ }
+ .fooditemcard
+ {
+	background:
+            linear-gradient(
+            180deg,
+            #ffffff,
+            #fff9fa
+            );
+		 border-radius:20px;
+		  box-shadow:
+             0 10px 30px rgba(0,0,0,0.06),
+             0 2px 8px rgba(0,0,0,0.04);
+		  cursor:pointer;
+		  overflow:hidden;
+		  transition:all .35s ease;
+		  border:1px solid rgba(226,55,68,0.08);
+     
+ }
+ 
+.fooditemcard img 
+{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}  
+
+.fooddetails
+{
+ padding:14px;
+
+}
+.fdname{
+   font-size:23px;
+   font-weight:700;
+	}
+	
+	.ratingandprice
+	{
+	 display:flex;
+       justify-content:space-between;
+	}
+	
+	.fdprice
+{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:12px;
+    background:
+    linear-gradient(
+    135deg,
+    #16a34a,
+    #15803d
+    );
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:.3px;
+    box-shadow:
+    0 6px 18px rgba(22,163,74,.25);
+    transition:.3s;
+	position:relative;
+	top:2px;
+}
+
+	
+	.fdrating
+	{
+	background:#0f7a3f;
+    color:white;
+    padding:5px 12px;
+    border-radius:8px;
+    font-weight:700;
+	}
+	
+	.mainbtn
+	{
+ border: 2px solid rgba(226, 55, 68, 0.6);
+ background-color: #e23744;
+ color: white;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(226, 55, 68, 0.4);
+ padding: 4px 60px;
+ font-size: 15px;
+ cursor: pointer;
+ font-weight:900;
+ transition: all 0.3s ease;
+	}
+	
+	
+
+.footer
+{
+    margin-top:40px;
+    background:
+    linear-gradient(
+    135deg,
+    #1c1114,
+    #2b0f14
+    );
+
+    color:white;
+    padding:20px 8% 25px;
+}
+
+.footergrid
+{
+    display:grid;
+    grid-template-columns:
+    repeat(4,1fr);
+    gap:40px;
+}
+
+.footer h3
+{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.footer h4
+{
+    margin-bottom:15px;
+    color:#ef5b68;
+}
+
+.footer p
+{
+    color:#d1d5db;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.footer p:hover
+{
+    color:white;
+}
+
+.footer hr
+{
+    border:none;
+    height:1px;
+    background:
+    rgba(255,255,255,.1);
+    margin:30px 0 20px;
+}
+
+.footerbottom
+{
+    text-align:center;
+    color:#9ca3af;
+    font-size:14px;
+}
+
+/*                                             code for menu items                                    */
+
+.restrausize
+{
+    width:83%;
+    min-height:190px;
+    margin:30px auto;
+    background:
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #fff8f9
+    );
+    border-radius:22px;
+    border:1px solid rgba(226,55,68,.10);
+    box-shadow:
+    0 8px 24px rgba(0,0,0,.06),
+    0 2px 8px rgba(226,55,68,.05);
+    position:relative;
+    overflow:hidden;
+    transition:.35s ease;
+    cursor:pointer;
+}
+
+.restrausize:hover
+{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.10),
+    0 8px 20px rgba(226,55,68,.12);
+}
+
+.restrauname
+{
+font-family: 'Okra', 'Helvetica Neue', Arial, sans-serif;
+margin-left:330px;
+position:relative;
+top:35px;
+left:50px;
+font-size:34px;
+font-weight:700;
+color:#1f1f1f;
+letter-spacing:-0.7px;
+}
+
+.description
+{
+line-height:1.7;
+color:#6b7280;
+font-size:15px;
+max-width:450px;
+}
+
+.innerdetails
+{
+font-family: 'Okra', 'Helvetica Neue', Arial, sans-serif;
+font-weight: 400;
+color: #696969;   
+font-size: 16px;
+margin-left:380px;
+margin-top:40px;
+}
+
+.price
+{
+    position:absolute;
+    right:140px;
+    top:25px;
+
+    font-family:'Playfair Display',serif;
+    font-size:40px;
+    font-weight:700;
+
+
+	
+
+    
+
+    letter-spacing:-1px;
+}
+
+
+.btn {
+ border: 2px solid rgba(226, 55, 68, 0.6);
+background:linear-gradient(
+135deg,
+#ff6b81 0%,
+#ff4757 45%,
+#d90429 100%
+);
+ color: white;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(226, 55, 68, 0.4);
+ padding: 10px 50px;
+ font-size: 20px;
+ transform: translateY(-45px); 
+
+ cursor: pointer;
+ font-weight:900;
+ transition: all 0.3s ease;
+ 
+  position:absolute;
+
+    right:95px;
+
+    top:140px;
+
+}
+
+.btn:hover
+{
+background-color:#d92d3a;
+border:2px solid #d92d3a;
+transform:
+translateY(-48px)
+scale(1.03);
+box-shadow:
+0 8px 22px rgba(226,55,68,0.35);
+transition:all 0.3s ease;
+}
+.imagecss
+{
+width:310px;
+height:205px;
+object-fit:cover;
+position:absolute;   
+ 
+top:-10px;          
+}
+/*                                       selected restrau  img            */
+/* ===========================
+   ULTRA PREMIUM HERO CARD
+   =========================== */
+
+.selectedrestrau
+{
+    width:85%;
+    margin:40px auto;
+
+    background:
+            linear-gradient(
+            180deg,
+            #ffffff,
+            #fff9fa
+            );
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    border:1px solid rgba(226,55,68,.08);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.10),
+    0 12px 30px rgba(0,0,0,.06),
+    0 0 0 1px rgba(255,255,255,.8) inset;
+
+    transition:.4s;
+}
+
+.selectedrestrau:hover
+{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 45px 100px rgba(0,0,0,.13),
+    0 20px 50px rgba(226,55,68,.10);
+}
+
+/* ================= IMAGE ================= */
+
+.imagewrap
+{
+    position:relative;
+    overflow:hidden;
+}
+
+#restrauimg
+{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    object-position:center bottom;
+    display:block;
+    transition:1.3s ease;
+}
+
+.selectedrestrau:hover #restrauimg
+{
+    transform:scale(1.05);
+}
+
+.imageoverlay
+{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.70),
+    rgba(0,0,0,.10),
+    transparent
+    );
+}
+
+.srtoprow
+{
+display:flex;
+  justify-content:space-between;
+}
+
+
+.selectedname
+{
+    font-size:44px;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-2px;
+    color:#111827;
+    text-shadow:
+    0 3px 10px rgba(0,0,0,.04);
+}
+
+/*               dcdvavda */
+
+ .srdetails{
+	 padding:18px;
+	 }
+	 .toprow
+	 {
+	  display:flex;
+	    justify-content:space-between;
+	 }
+	
+	.srrating
+	{
+	 font-size:28px;
+	 border-radius:30px;
+	 color:white;
+	 padding:5px 22px 6px 30px;
+	 font-weight:700;
+	  background:
+    linear-gradient(
+    135deg,
+    #ff6b7a,
+    #e23744
+    );
+    color:white;
+	}
+	 .srcuisine
+	 {
+	 display:flex;
+	  justify-content:space-between;
+	  color:#666;
+        margin-top:12px;
+        font-size:18px;
+		max-width:700px;
+	 }
+	 .srlocation
+	 {
+	 margin-top:7px;
+       color:#888;
+	
+	 }
+	.srbottom
+	{
+	margin-top:7px;
+	display:flex;
+	justify-content:space-between;
+	}
+    .srstatus
+{
+    color:#e23744;
+    font-weight:700;
+}
+	 .srdistance
+	 {
+	  position:absolute;
+	 left:1060px;
+	  font-weight:600;
+	  color:gray;
+	 }
+	 .srprice
+	 {
+	   margin-top:8px;
+	 }
+.quantitybox
+{
+position:absolute;
+right:94px;
+top:95px;
+display:flex;
+align-items:center;
+display:none;
+
+}
+
+.btnplus,
+.btnqnt,
+.btnminus
+{
+margin:0;
+color:white;
+padding:10px 18px;
+box-shadow:
+0 0 10px rgba(226,55,68,0.35);
+ border: 2px solid rgba(226, 55, 68, 0.6);
+background:linear-gradient(
+135deg,
+#ff6b81 0%,
+#ff4757 45%,
+#d90429 100%
+);
+ color: white;
+ box-shadow: 0 0 10px rgba(226, 55, 68, 0.4);
+
+ transform: translateY(-45px); 
+ cursor: pointer;
+ font-weight:900;
+ position:relative;
+left:13px;
+top:37px;
+}
+
+.btnplus
+{
+border-radius:0 20px 20px 0;
+
+border:2px solid rgba(255,255,255,0.22);
+
+   font-size:21px;
+    font-weight:800;
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+
+
+
+}
+.btnplus:hover
+{
+border-radius:0 22px 22px 0;
+
+border:2px solid rgba(255,255,255,0.22);
+font-size:22px;
+color:white;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.15),
+0 0 12px rgba(255,80,90,0.28),
+0 8px 22px rgba(226,55,68,0.32),
+0 3px 8px rgba(0,0,0,0.12);
+transition:0.3s;
+
+}
+
+
+
+.btnqnt
+{
+padding-left:30px;
+padding-right:30px;
+
+
+   font-size:21px;
+    font-weight:800;
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+}
+
+.btnminus
+{
+   font-size:21px;
+    font-weight:800;
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+border-radius:20px 0 0 20px;
+border:2px solid rgba(255,255,255,0.22);
+}
+
+.btnminus:hover
+{
+border-radius:22px 0 0 22px;
+border:2px solid rgba(255,255,255,0.22);
+font-size:22px;
+color:white;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.15),
+0 0 12px rgba(255,80,90,0.28),
+0 8px 22px rgba(226,55,68,0.32),
+0 3px 8px rgba(0,0,0,0.12);
+transition:0.3s;
+}
+
+.btn:hover
+{
+background-color:#d92d3a;
+border:2px solid #d92d3a;
+transform:
+translateY(-48px)
+scale(1.03);
+box-shadow:
+0 8px 22px rgba(226,55,68,0.35);
+transition:all 0.3s ease;
+}
+
+.billcard
+{
+    width:230px;
+    height:85px;
+  padding:4px 15px;
+    position:fixed;
+    bottom:35px;
+    right:35px;
+    display:flex;
+    align-items:center;
+	
+background: linear-gradient(135deg, #ff0844, #ff4b2b);
+    border:2px solid #d4af37;
+    border-radius:54px;
+
+    cursor:pointer;
+    overflow:hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.55),
+        0 0 20px rgba(212,175,55,.35),
+        inset 0 1px 2px rgba(255,255,255,.08);
+
+    transition:.4s;
+}
+
+
+.billcard:hover
+{
+    transform:
+        translateY(-8px)
+        scale(1.03);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.65),
+        0 0 35px rgba(212,175,55,.5);
+}
+
+.fontposition
+{
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,.18);
+    user-select: none;
+    margin-left:10px;
+}
+
+/*    code for table  */
+
+.billtable
+{
+    width:100%;
+    max-width:400px;
+	position:absolute;
+   left:890px;
+      top:200px;
+    border-collapse:separate;
+    border-spacing:0;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.10),
+        0 8px 20px rgba(0,0,0,0.05);
+
+    border:1px solid #ececec;
+}
+
+/* HEADER */
+.billtable tr:first-child
+{
+    background:
+    linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff2d55,
+        #c9184a
+    );
+
+    color:white;
+    font-size:15px;
+    font-weight:700;
+}
+
+/* CELLS */
+.billtable td
+{
+    padding:18px 22px;
+    text-align:center;
+    border-bottom:1px solid #f0f0f0;
+    font-size:15px;
+  
+}
+
+/* ITEM NAME */
+.billtable td:nth-child(2)
+{
+    text-align:left;
+    font-weight:600;
+
+}
+
+/* PRICE COLUMN */
+.billtable td:nth-child(4)
+{
+
+    font-weight:700;
+}
+
+/* ROW HOVER */
+.billtable tr:not(:first-child):not(:last-child):hover
+{
+    background:#fff8f9;
+    transition:.3s;
+}
+
+/* TOTAL ROW */
+.billtable tr:last-child
+{
+    background:
+    linear-gradient(
+        135deg,
+        #fff1f3,
+        #ffe4e6
+    );
+
+    font-size:18px;
+    font-weight:800;
+}
+
+.billtable tr:last-child td
+{
+    border-bottom:none;
+    color:#111;
+}
+
+/* ROW HEIGHT */
+.billtable tr
+{
+    height:65px;
+}
+
+/* OPTIONAL CONTAINER */
+#billwrapper {
+  height: 270px;      
+    margin-top: 0;
+    padding-top: 0;
+  
+}
+
+#billRow0,
+#billRow1,
+#billRow2,
+#billRow3,
+#billRow4,
+#billRow5,
+#billRow6
+{
+    display:none;
+}
+
+#packingRow,
+#gstRow,
+#totalRow,
+#deliveryRow,
+#platformRow
+{
+    display:none;
+}
+
+#deliveryRow,
+#platformRow,
+#packingRow,
+#gstRow {
+    background-color: #f9f9f9;
+}
+
+#totalRow {
+    background-color: #ffe4e6;
+}
+
+.bill-actions
+{
+
+width:57%;
+    margin-top: 25px;
+	margin-left:80px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Explore card */
+.explore-more
+{
+   margin-top:40px;
+    background: linear-gradient(135deg,#fff5f6,#ffe9ed);
+    border: 1px solid #ffd4dc;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(255,45,85,0.08);
+}
+
+.explore-more h3
+{
+    margin: 0;
+    color: #c9184a;
+}
+
+.explore-more p
+{
+    margin: 6px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Browse button */
+#exploreBtn
+{
+ border: 3px solid #ffd4dc;
+width:200px;
+height:50px;
+    cursor:pointer;
+    border: none;
+    background: white;
+    color: #ff2d55;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: .3s;
+	font-size:18px;
+	
+}
+
+#exploreBtn:hover
+{
+    transform: translateY(-2px);
+    background: #fff8f9;
+}
+
+/* Payment button */
+#paymentBtn
+{
+    width: 100%;
+	height:90px;
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff2d55,
+        #c9184a
+    );
+    color: white;
+    padding: 18px;
+    border-radius: 23px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+        0 12px 30px rgba(255,45,85,0.35);
+    transition: .3s;
+}
+
+#paymentBtn:hover
+{
+    transform: translateY(-3px);
+    box-shadow:
+        0 18px 35px rgba(255,45,85,0.45);
+}
+
+/* css for delivery details */
+
+#deliveryBox
+{
+margin-top:30px;
+margin-left:90px;
+    width: 745px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.08),
+        0 5px 15px rgba(255,45,85,0.08);
+    border: 1px solid #f0e5e8;
+    box-sizing: border-box;
+}
+
+#deliveryBox h2
+{
+    margin: 0 0 30px;
+    color: #ff2d55;
+}
+
+/* Each field */
+.field
+{
+    margin-bottom: 20px;
+}
+
+.field label
+{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Inputs */
+.field input,
+.field textarea
+{
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    background: #fafafa;
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.field input:focus,
+.field textarea:focus
+{
+    background: white;
+    border-color: #ff2d55;
+    box-shadow: 0 0 0 4px rgba(255,45,85,0.12);
+}
+
+.field textarea
+{
+    min-height: 90px;
+    resize: none;
+}
+
+/* Buttons */
+.btns
+{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#backBtn
+{
+    padding: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+#saveBtn
+{
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #ff5f6d,
+        #ff2d55,
+        #c9184a
+    );
+    box-shadow: 0 10px 25px rgba(255,45,85,0.35);
+}
+
+/* payment options */
+
+#paymentBox
+{
+    margin-top: 30px;
+    margin-left: 90px;
+    width: 745px;
+
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.08),
+        0 5px 15px rgba(255,45,85,0.08);
+
+    border: 1px solid #f0e5e8;
+    box-sizing: border-box;
+}
+
+#paymentBox h2
+{
+    margin: 0;
+    color: #ff2d55;
+}
+
+.subtitle
+{
+    margin-top: 12px;
+    margin-bottom: 35px;
+    color: #777;
+}
+
+/* Payment Cards */
+.payment-card
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px;
+    margin-bottom: 20px;
+
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.payment-card:hover
+{
+    border-color: #ff2d55;
+    box-shadow:
+        0 10px 25px rgba(255,45,85,0.10);
+}
+
+/* Icons */
+.icon
+{
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.online-icon
+{
+    background:
+        linear-gradient(
+            135deg,
+            #ffb100,
+            #ff8c00
+        );
+
+    color: white;
+}
+
+.cod-icon
+{
+    background:
+        linear-gradient(
+            135deg,
+            #8b95a7,
+            #5e6777
+        );
+
+    color: white;
+}
+
+/* Text */
+.payment-info
+{
+    flex: 1;
+}
+
+.payment-info h3
+{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-info p
+{
+    margin-top: 8px;
+    color: #666;
+}
+
+/* Recommended tag */
+.tag
+{
+    background: #dcfce7;
+    color: #15803d;
+
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* UPI buttons */
+.upi-list
+{
+    margin-top: 12px;
+}
+
+.upi-list span
+{
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+/* Arrow */
+.arrow
+{
+    font-size: 24px;
+    color: #999;
+}
+
+/* Back button */
+#backPayment
+{
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+
+    background: #ffffff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#backPayment:hover
+{
+    background: #fafafa;
+}
+
+/*  css for scanner */
+
+#upiBox
+{
+    width: 745px;
+    margin-top: 30px;
+    margin-left: 90px;
+
+    background: white;
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.08),
+        0 5px 15px rgba(255,45,85,.08);
+
+    border: 1px solid #f0e5e8;
+    box-sizing: border-box;
+}
+
+.upi-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.upi-header h2
+{
+    margin: 0;
+    color: #ff6b00;
+}
+
+#changeMethod
+{
+    color: #ff6b00;
+    cursor: pointer;
+}
+
+.qr-section
+{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.qr-card
+{
+    width: 250px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+#qrImage
+{
+    width: 100%;
+	height:200px;
+    display: block;
+	
+	object-fit:cover;
+}
+
+#payAmount
+{
+    color: #ff6b00;
+    margin: 25px 0 5px;
+}
+
+.pay-text
+{
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.upi-id-card
+{
+    width: 180px;
+    margin: auto;
+    padding: 18px;
+    background: #f7f7f7;
+    border-radius: 18px;
+}
+
+.upi-id-card span
+{
+    color: #777;
+    font-size: 12px;
+}
+
+.upi-id-card h3
+{
+    margin: 8px 0;
+}
+
+.upi-id-card p
+{
+    margin: 0;
+    color: #666;
+}
+
+.howto-box
+{
+    margin-top: 30px;
+    background: #fff8eb;
+    border: 1px solid #ffd66b;
+    border-radius: 20px;
+    padding: 18px;
+	font-size:13px;
+}
+
+.howto-box h3
+{
+    margin-top: 0;
+    color: #b56500;
+}
+
+.step
+{
+    margin: 6px 0;
+    color: #6d4c00;
+}
+
+.step span
+{
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffb300;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#paidBtn
+{
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+
+    border: none;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #ff6b00
+        );
+
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(255,107,0,.25);
+}
+
+.demoText
+{
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.banner{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+    position:relative;
+	  width:90%;
+    margin:40px auto;
+	border-radius:20px;
+	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.slider{
+    display:flex;
+    width:300%;
+    height:100%;
+    animation:slide 18s infinite;
+}
+
+.slider img{
+    width:33.3333%;   /* Each image takes exactly 1/3 of the slider */
+    height:100%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+@keyframes slide{
+
+    0%,30%{
+        transform:translateX(0);
+    }
+
+    33%,63%{
+        transform:translateX(-33.3333%);
+    }
+
+    66%,96%{
+        transform:translateX(-66.6666%);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
 </style>
+<script>
+
+      let newindex =1;
+	  let selecteditems = [ ]; 
+     let itemlist =0;
+	   let s= "";
+    let restrauarr =
+	 [
+      "The Golden Spoon",
+      "Aurum Dining",
+      "The Downtown Cafe",
+      "Crimson Table",
+      "Velvet Flame",
+      "The Ember House",
+	  "The Opal Lounge",
+	  "Saffron Royale",
+       "Velvet Orchid"
+     ];
+	 
+	 let foodname = [ 
+	 ["Pizza","Momos", "Sushi", "Tacos", "Noodles", "Pancakes", "Burger"],
+	 ["Biryani", "Paneer Butter Masala", "Momos", "Hakka Noodles", "Burger", "Masala Dosa", "Spring Rolls"],
+      ["Chole Bhature", "Fried Rice", "Pizza", "Manchurian", "Pav Bhaji", "Pasta", "Samosa"],
+      ["Butter Chicken", "Chow Mein", "Tandoori Chicken", "White Sauce Pasta", "Maggie", "Kathi Roll", "Tacos"],
+     ["Dal Makhani", "Chicken Biryani", "Momos", "Pizza", "Noodles", "Sandwich", "Dhokla"],
+   ["Paneer Tikka", "Fried Momos", "Burger", "Pani Puri", "Chilli Chicken", "Pasta", "Idli"],
+    ["Chole Bhature", "Fried Rice", "Pizza", "Manchurian", "Pav Bhaji", "Pasta", "Samosa"],
+      ["Butter Chicken", "Chow Mein", "Tandoori Chicken", "White Sauce Pasta", "Maggie", "Kathi Roll", "Tacos"],
+	   ["Biryani", "Paneer Butter Masala", "Momos", "Hakka Noodles", "Burger", "Masala Dosa", "Spring Rolls"]
+    ];
+
+    let desc = [
+
+[
+"Cheesy oven baked crust topped with rich tomato sauce, melted cheese, fresh vegetables, and delicious toppings creating flavorful satisfying meals everyone loves",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snack experiences",
+"Fresh Japanese rice rolls packed with seafood, vegetables, and delicious fillings wrapped carefully inside seaweed sheets for authentic flavorful bites",
+"Crispy folded tortillas stuffed with meat, vegetables, cheese, and delicious sauces creating flavorful handheld meals perfect for lunch or dinner",
+"Long stir fried strands cooked with vegetables, sauces, seasonings, and spices creating flavorful delicious comfort meals loved around the world",
+"Soft fluffy breakfast cakes served with butter, syrup, fruits, chocolate, or savory toppings creating delicious meals for every time",
+"Juicy grilled patty layered with vegetables, cheese, sauces, and soft buns creating delicious satisfying meals packed with flavor"
+],
+
+[
+"Fragrant rice cooked slowly with spices, herbs, vegetables, or meat creating rich aromatic dishes filled with bold delicious flavors",
+"Creamy tomato gravy cooked with soft paneer cubes, butter, cream, and aromatic spices creating rich flavorful North Indian dishes",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snack experiences",
+"Thin stir fried noodles mixed with vegetables, sauces, seasonings, and spices creating flavorful satisfying dishes loved by all age groups",
+"Juicy grilled patty layered with vegetables, cheese, sauces, and soft buns creating delicious satisfying meals packed with flavor",
+"Crispy golden rice crepe served alongside coconut chutney and flavorful curry creating authentic delicious South Indian breakfast experiences",
+"Crispy fried rolls stuffed with vegetables or meat fillings creating crunchy flavorful snacks served with delicious dipping sauces"
+],
+
+[
+"Spicy chickpea curry served alongside fluffy deep fried bread creating one of the most popular North Indian comfort meals",
+"Rice stir fried with vegetables, sauces, seasonings, and spices creating smoky flavorful dishes perfect for lunch and dinner meals",
+"Cheesy oven baked crust topped with rich tomato sauce, melted cheese, fresh vegetables, and delicious toppings creating flavorful satisfying meals",
+"Crunchy vegetable balls tossed inside spicy Indo Chinese gravy creating flavorful dishes packed with sauces vegetables and delicious seasonings",
+"Spiced mashed vegetables cooked with butter and served alongside toasted bread creating rich flavorful street food loved everywhere",
+"Italian noodles cooked with creamy sauces, vegetables, cheese, herbs, and seasonings creating delicious filling comfort meals for everyone",
+"Crispy fried pastry stuffed with spicy potato fillings creating flavorful crunchy snacks enjoyed with tea or delicious chutneys"
+],
+
+[
+"Creamy chicken curry cooked with butter, spices, tomatoes, and rich gravy creating flavorful North Indian dishes loved worldwide",
+"Thin stir fried noodles tossed with vegetables, sauces, seasonings, and spices creating flavorful satisfying dishes perfect for quick meals",
+"Chicken marinated with yogurt and spices then roasted perfectly creating smoky juicy flavorful meat dishes packed with taste",
+"Pasta cooked with creamy milk sauce, cheese, herbs, and seasonings creating smooth delicious comfort meals with rich flavors",
+"Instant noodles cooked quickly with vegetables, seasonings, sauces, and spices creating simple tasty comfort food loved by students",
+"Soft flatbread wrapped around spicy fillings creating portable flavorful rolls perfect for quick meals packed with delicious ingredients",
+"Crispy folded tortillas stuffed with meat, vegetables, cheese, and delicious sauces creating flavorful handheld meals perfect anytime"
+],
+
+[
+"Creamy black lentils slow cooked with butter, cream, and aromatic spices creating rich flavorful comfort food loved everywhere",
+"Fragrant rice cooked with chicken, herbs, spices, and seasonings creating delicious aromatic dishes packed with rich flavors",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snacks",
+"Cheesy oven baked crust topped with rich tomato sauce, melted cheese, fresh vegetables, and delicious toppings creating flavorful meals",
+"Long stir fried strands cooked with vegetables, sauces, seasonings, and spices creating flavorful delicious comfort meals loved worldwide",
+"Bread slices layered with vegetables, cheese, sauces, or meat creating quick delicious filling meals perfect for busy days",
+"Soft steamed fermented snack served with coconut chutney and curry creating light healthy breakfast meals packed with flavor"
+],
+
+[
+"Paneer cubes marinated with yogurt and spices then grilled perfectly creating smoky flavorful vegetarian dishes packed with delicious taste",
+"Crispy fried dumplings stuffed with delicious fillings served alongside spicy sauces creating crunchy flavorful snacks loved by everyone",
+"Juicy grilled patty layered with vegetables, cheese, sauces, and soft buns creating delicious satisfying meals packed with flavor",
+"Crispy hollow snacks filled with spicy flavored water creating refreshing tangy street food experiences loved across India",
+"Chicken cooked with spicy Indo Chinese sauces creating flavorful dishes packed with vegetables seasonings and delicious spicy flavors",
+"Italian noodles cooked with creamy sauces, vegetables, cheese, herbs, and seasonings creating delicious filling comfort meals for everyone",
+"Soft steamed rice cakes served alongside coconut chutney and flavorful curry creating light healthy delicious breakfast experiences"
+],
+
+[
+"Creamy black lentils slow cooked with butter, cream, and aromatic spices creating rich flavorful comfort food loved everywhere",
+"Fragrant rice cooked with chicken, herbs, spices, and seasonings creating delicious aromatic dishes packed with rich flavors",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snacks",
+"Cheesy oven baked crust topped with rich tomato sauce, melted cheese, fresh vegetables, and delicious toppings creating flavorful meals",
+"Long stir fried strands cooked with vegetables, sauces, seasonings, and spices creating flavorful delicious comfort meals loved worldwide",
+"Bread slices layered with vegetables, cheese, sauces, or meat creating quick delicious filling meals perfect for busy days",
+"Soft steamed fermented snack served with coconut chutney and curry creating light healthy breakfast meals packed with flavor"
+],
+
+[
+"Fragrant rice cooked slowly with spices, herbs, vegetables, or meat creating rich aromatic dishes filled with bold delicious flavors",
+"Creamy tomato gravy cooked with soft paneer cubes, butter, cream, and aromatic spices creating rich flavorful North Indian dishes",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snack experiences",
+"Thin stir fried noodles mixed with vegetables, sauces, seasonings, and spices creating flavorful satisfying dishes loved by all age groups",
+"Juicy grilled patty layered with vegetables, cheese, sauces, and soft buns creating delicious satisfying meals packed with flavor",
+"Crispy golden rice crepe served alongside coconut chutney and flavorful curry creating authentic delicious South Indian breakfast experiences",
+"Crispy fried rolls stuffed with vegetables or meat fillings creating crunchy flavorful snacks served with delicious dipping sauces"
+],
+
+[
+"Fragrant rice cooked slowly with spices, herbs, vegetables, or meat creating rich aromatic dishes filled with bold delicious flavors",
+"Creamy tomato gravy cooked with soft paneer cubes, butter, cream, and aromatic spices creating rich flavorful North Indian dishes",
+"Soft steamed dumplings stuffed with delicious fillings and served hot alongside spicy chutneys and flavorful sauces creating tasty snack experiences",
+"Thin stir fried noodles mixed with vegetables, sauces, seasonings, and spices creating flavorful satisfying dishes loved by all age groups",
+"Juicy grilled patty layered with vegetables, cheese, sauces, and soft buns creating delicious satisfying meals packed with flavor",
+"Crispy golden rice crepe served alongside coconut chutney and flavorful curry creating authentic delicious South Indian breakfast experiences",
+"Crispy fried rolls stuffed with vegetables or meat fillings creating crunchy flavorful snacks served with delicious dipping sauces"
+]
+
+];	
+
+let fprice = [
+
+["₹249","₹129","₹399","₹179","₹149","₹169","₹199"],
+
+["₹220","₹240","₹129","₹159","₹199","₹120","₹149"],
+
+["₹140","₹180","₹249","₹190","₹160","₹229","₹125"],
+
+["₹280","₹170","₹320","₹249","₹170","₹180","₹179"],
+
+["₹230","₹260","₹129","₹249","₹149","₹120","₹160"],
+
+["₹240","₹149","₹199","₹50","₹220","₹229","₹180"],
+
+["₹230","₹260","₹129","₹249","₹149","₹120","₹160"],
+
+["₹240","₹149","₹199","₹50","₹220","₹229","₹180"],
+
+["₹220","₹240","₹129","₹159","₹199","₹120","₹149"]
+
+];
+
+let foodimg = [
+	
+["pizza.jpg", "momos.jpg", "sushi.jpg", "tacos.jpg", "noodles.jpg", "pancakes.jpg", "burger.jpg"],
+
+["biryani.jpg", "paneer_butter_masala.jpg", "momos.jpg", "noodles.jpg", "burger.jpg", "masala_dosa.jpg", "spring_rolls.jpg"],
+
+["s03.jpg", "fried_rice.jpg", "pizza.jpg", "manchurian.jpg", "pav_bhaji.jpg", "pasta.jpg", "samosa.jpg"],
+
+["butter_chicken.jpg", "chow_mein.jpg", "tandoori_chicken.jpg", "white_sauce_pasta.jpg", "maggie.jpg", "kathi_roll.jpg", "tacos.jpg"],
+
+["dal_makhani.jpg", "biryani.jpg", "momos.jpg", "pizza.jpg", "noodles.jpg", "sandwich.jpg", "dhokla.jpg"],
+
+["paneer_tikka.jpg", "momos.jpg", "burger.jpg", "pani_puri.jpg", "chilli_chicken.jpg", "pasta.jpg", "idli.jpg"],
+
+["s03.jpg", "fried_rice.jpg", "pizza.jpg", "manchurian.jpg", "pav_bhaji.jpg", "pasta.jpg", "samosa.jpg"],
+
+["butter_chicken.jpg", "chow_mein.jpg", "tandoori_chicken.jpg", "white_sauce_pasta.jpg", "maggie.jpg", "kathi_roll.jpg", "tacos.jpg"],
+
+["biryani.jpg", "paneer_butter_masala.jpg", "momos.jpg", "noodles.jpg", "burger.jpg", "masala_dosa.jpg", "spring_rolls.jpg"]
+]
+
+let srrating =
+[
+ "4.5 ★",
+ "4.3 ★",
+ "4.2 ★",
+ "4.1 ★",
+  "4.1 ★",
+ "4.0 ★",
+  "4.4 ★",
+ "4.0 ★",
+ "4.3 ★",
+];
+
+
+let srimg =
+[
+ "r02.jpg",
+ "r04.jpg",
+ "r03.jpg",
+ "r06.jpg",
+ "r08.jpg",
+ "r07.jpg",
+ "r10.jpg",
+ "r11.jpg",
+ "r12.jpg"
+];
+
+let cuisinedesc = [
+
+"Elegant fine-dining destination serving authentic North Indian, fresh salads, and Oriental delicacies crafted with premium ingredients and rich flavors.",
+
+"Luxury dining experience featuring Mughlai specialties, aromatic biryanis, and classic North Indian dishes prepared with royal culinary traditions.",
+
+"Modern café offering handcrafted coffee, flavorful Chinese cuisine, and delicious snacks in a relaxed and contemporary atmosphere.",
+
+"Premium restaurant known for rich North Indian classics, Oriental favorites, and handcrafted mocktails served in a sophisticated setting.",
+
+"Vibrant dining spot serving flavorful North Indian meals, aromatic biryanis, and authentic South Indian delicacies for every palate.",
+
+"Contemporary eatery specializing in Chinese cuisine, Mexican favorites, and gourmet snacks prepared with fresh ingredients and bold flavors.",
+
+"Upscale lounge offering premium North Indian dishes, Oriental specialties, and refreshing mocktails in a stylish and elegant environment.",
+
+"Royal-themed restaurant serving authentic North Indian cuisine, signature biryanis, and traditional South Indian specialties with exceptional hospitality.",
+
+"Chic dining destination featuring Chinese favorites, Mexican delights, and handcrafted snacks served in a warm and luxurious ambience."
+
+];
+
+    function paidf()
+	{
+	    alert("order successfull");
+		document.getElementById("upiBox").style.display ="none";
+		document.getElementById("upiBox").style.display ="none";
+		document.getElementById("billwrapper").style.display ="none";
+		document.getElementById("table01").style.display ="none";
+		document.getElementById("billcardid").style.display ="none";
+		
+		//making all restaurents visible
+		
+		for( i=0;i<9;i++)
+		{
+		   document.getElementById("r"+i).style.display ="block";
+		}
+		itemlist =0;
+		 s= "";
+		
+		document.getElementById("menuitems").style.display ="block";
+	
+		
+	}
+
+    
+	  
+    function itemselected(x)
+	{
+	    document.getElementById("bannerid").style.display="none";
+	   let a = x;
+	   if(x<9)
+	   {
+	   s = restrauarr[x];
+	  0
+	   }
+	   
+	   for(i=0;i<17;i++)
+	   {
+	     document.getElementById("r"+i).style.display ="none";
+	   }
+	   document.getElementById("menuitems").style.display ="block";
+	   
+	    for(let i=0;i<restrauarr.length;i++)
+        {
+		
+        if(s===restrauarr[i])
+        {
+		  document.getElementById("selectedrestrau").style.display ="block";
+            for(let j=0;j<7;j++)
+            {
+                document.getElementById("fname"+j).innerHTML =  foodname[i][j];
+				document.getElementById("fdesc"+j).innerHTML =   desc[i][j];
+				document.getElementById("foodprice"+j).innerHTML =   fprice[i][j];
+				document.getElementById("img"+j).src =foodimg[i][j];
+				document.getElementById("restrauimg").src = srimg[i];
+				document.getElementById("selectedname").innerHTML =   restrauarr[i];
+				document.getElementById("srratingg").innerHTML =   srrating[i];
+				document.getElementById("cusineid").innerHTML =cuisinedesc[i];
+            }
+			 document.getElementById("menuitems").style.marginTop = "-200px";
+			 document.getElementById("hello").style.fontSize = "18px";
+			 document.getElementById("hello1").style.fontSize = "20px";
+			 document.getElementById("bottom").style.display = "none";
+			 
+        }
+    }
+	}
+	
+	function defaultlook()
+	{
+	document.getElementById("menuitems").style.display ="none";
+	document.getElementById("selectedrestrau").style.display ="none";
+	 document.getElementById("billcardid").style.display="none";
+	  document.getElementById("billwrapper").style.display="none";
+	   document.getElementById("deliveryBox").style.display ="none";
+	     document.getElementById("paymentBox").style.display ="none";
+		 document.getElementById("upiBox").style.display ="none";
+	   
+	 for(i =0;i<7;i++)
+	 {
+	      document.getElementById("qtybox"+i).style.display ="none";
+	 }
+	}
+	
+	function showqty(n)
+{
+ 
+  document.getElementById("qtybox"+n).style.display="flex";
+  document.getElementById("addbtn"+n).style.display="none";
+  document.getElementById("billcardid").style.display="flex";
+  
+   
+}
+
+function increase(n)
+{
+	let x = parseInt(document.getElementById("lblqty"+n).innerHTML) + 1;
+   document.getElementById("lblqty"+n).innerHTML = x;
+}
+
+function decrease(n)
+{
+	let x = parseInt(document.getElementById("lblqty"+n).innerHTML);
+	
+    if(x > 0)
+    {
+        x--;
+        document.getElementById("lblqty"+n).innerHTML = x;
+    }
+	if(x==0)
+	{
+	 
+	if( backm ==6)
+	{
+	    document.getElementById("d"+n).style.display = "none";
+	}
+	if( backm ==5)
+	{
+	  document.getElementById("d"+n).style.display = "block";
+	}
+	}
+}
+
+function billingitems(a)
+{
+	 let id = a;
+     let index = parseInt(id);
+     selecteditems[itemlist] = index;
+     itemlist = itemlist+1;
+}
+
+ function cartf()
+	{
+	     for(i=0;i<7;i++)
+             {
+                 
+				 document.getElementById("fdesc" +i).style.display= "none";
+	             document.getElementById("d" +i).style.width= "55%";
+	              document.getElementById("d" +i).style.height= "105px";
+				  document.getElementById("d" +i).style.display= "none";
+				  document.getElementById("fname" +i).style.marginLeft= "300px";
+				  document.getElementById("foodprice" +i).style.right= "331px";
+				   document.getElementById("foodprice" +i).style.top= "88px";
+				    document.getElementById("foodprice" +i).style.fontSize= "33px";
+					document.getElementById("d" +i).style.marginLeft= "80px";
+	         } 
+			   document.getElementById("billwrapper").style.display="block";
+			  document.getElementById("selectedrestrau").style.display= "none";
+			  
+		      for(j=0;j<selecteditems.length;j++)
+              {
+              let xy = parseInt(document.getElementById("lblqty"+selecteditems[j]).innerHTML);
+			 
+                 if(xy == 0)
+	              {
+	              }
+	               else
+				   {
+                      document.getElementById("d"+selecteditems[j]).style.display="block";
+		           }
+   }  
+	}
+	
+function bill()
+{
+    let total = 0;
+    let slno = 1;
+    let rowNo = 0;
+
+    // Hide all item rows first
+    for(let i = 0; i < 7; i++)
+    {
+        document.getElementById("billRow" + i).style.display = "none";
+
+        document.getElementById("billSl" + i).innerHTML = "";
+        document.getElementById("billName" + i).innerHTML = "";
+        document.getElementById("billQty" + i).innerHTML = "";
+        document.getElementById("billPrice" + i).innerHTML = "";
+    }
+
+    // Add items to bill
+    for(let i = 0; i < 7; i++)
+    {
+        let qty = parseInt(
+            document.getElementById("lblqty" + i).innerHTML
+        );
+
+        if(qty > 0)
+        {
+            document.getElementById("billRow" + rowNo)
+                    .style.display = "table-row";
+
+            document.getElementById("billSl" + rowNo)
+                    .innerHTML = slno++;
+
+            document.getElementById("billName" + rowNo)
+                    .innerHTML =
+                    document.getElementById("fname" + i).innerHTML;
+
+            document.getElementById("billQty" + rowNo)
+                    .innerHTML = qty;
+
+            let priceText =
+                document.getElementById("foodprice" + i).innerHTML;
+
+            document.getElementById("billPrice" + rowNo)
+                    .innerHTML = priceText;
+
+            let price =
+                parseInt(priceText.split("₹")[1]);
+
+            total += price * qty;
+
+            rowNo++;
+        }
+    }
+
+    // If cart is empty, hide charge rows and return
+    if(total === 0)
+    {
+        document.getElementById("deliveryRow").style.display = "none";
+        document.getElementById("platformRow").style.display = "none";
+        document.getElementById("packingRow").style.display = "none";
+        document.getElementById("gstRow").style.display = "none";
+        document.getElementById("totalRow").style.display = "none";
+        return;
+    }
+	
+	
+
+    // Charges
+    let deliveryCharge = 50;
+    let platformFee = 20;
+    let packingCharge = 30;
+    let gst = total * 0.18;
+
+    let finalAmount =
+        total +
+        deliveryCharge +
+        platformFee +
+        packingCharge +
+        gst;
+
+    // Show charge rows
+    document.getElementById("deliveryRow")
+            .style.display = "table-row";
+
+    document.getElementById("platformRow")
+            .style.display = "table-row";
+
+    document.getElementById("packingRow")
+            .style.display = "table-row";
+
+    document.getElementById("gstRow")
+            .style.display = "table-row";
+
+    document.getElementById("totalRow")
+            .style.display = "table-row";
+
+    // Fill charges
+    document.getElementById("deliveryCharge")
+            .innerHTML = "₹" + deliveryCharge;
+
+    document.getElementById("platformCharge")
+            .innerHTML = "₹" + platformFee;
+
+    document.getElementById("packingCharge")
+            .innerHTML = "₹" + packingCharge;
+
+    document.getElementById("gstAmount")
+            .innerHTML = "₹" + gst.toFixed(2);
+
+    document.getElementById("totalBill")
+            .innerHTML = "₹" + finalAmount.toFixed(2);
+}
+
+function adddetails()
+{
+     for(i=0;i<=selecteditems.length;i++)
+	 {
+	     document.getElementById("d" +i).style.display ="none"; 
+	 }
+	  document.getElementById("hhh").style.display ="none";
+		 document.getElementById("deliveryBox").style.display ="block";
+		 document.getElementById("billwrapper").style.height ="800px";
+}
+
+function saveDelivery()
+{
+          document.getElementById("deliveryBox").style.display ="none";
+       document.getElementById("paymentBox").style.display ="block";
+}
+	function selectPayment(c)
+	{
+	    document.getElementById("paymentBox").style.display ="none";
+		if(c==="online")
+		{
+		     document.getElementById("upiBox").style.display ="block";
+		}
+	}
+
+
+</script>
 </head>
-<body>
-       <div class="restraugrid" >
+<body onload="defaultlook()">
+        <!--code for searchbar-->
+		<div class="searchbar" id = "searchbarid">
+		       <div class="logo"> Bite <span class="rush">Rush</span></div>
+		       <div class="searchb" id ="searchbid">
+                             <input onkeyup="hidediv()" type="text" placeholder="Search for restaurants, cuisine or a dish" class="searchf" id ="tx1" >
+		        </div> 
+		        <div > 
+		         <div class = "authbox" >
+                      <div class="loginbtn1" onclick="openLogin();" id="signinbtn" >   Sign In </div>
+			         <div class= "loginbtn" onclick="openLoginf();" id="loginbtnn">  Login </div>
+			         <div class= "cartbtn" id ="cartid" onclick="bill(); cartf();">  <img src ="cart.png" height=60 ></div>
+			     </div >
+		   </div>
+		   </div>
+		   
+		   <!--banner -->
+		      
+		   
+		   <!--code for selected restrau  img -->
+      
+	  
+	   <div class="banner" id ="bannerid">
+    <div class="slider">
+        <img src="banner1.png" alt="">
+        <img src="banner2.png" alt="">
+        <img src="banner3.png" alt="">
+    </div>
+</div>
+           <div class="selectedrestrau" id="selectedrestrau" >
+              <img id="restrauimg">
+                    <div class="srdetails">
+		       <div class="srtoprow">
+			    <div class="selectedname" id="selectedname"> </div>
+                     <div class="srrating" id="srratingg"> </div>
+			</div>
+			<div>
+			        <div class="srcuisine" id="cusineid">
+                         
+                        <span class="srprice">₹1,900 for two</span>
+                        </div>
+                          <div class="srlocation" style = "font-size:18px;">
+                             Sakchi,Jamshedpur
+                         </div>
+                         <div class="srbottom">
+                             <div class="srstatus">Opens between 8 am to 10pm</div>
+                             <div class="srdistance">374 m</div>
+                        </div>
+			</div>
+		   </div>
+                   </div>
+           
+        <!-- code for restrau grid -->
+       <div class="restraugrid" style="margin-top:40px;" >
 	   <!--restrau 01-->
-	       <div class ="restraucards" id ="r01"> 
+	       <div class ="restraucards" id ="r0" onclick="itemselected(0)"> 
 		   <img src ="r02.jpg">
 		   <div class="details">
 		       <div class="toprow">
@@ -103,7 +2238,7 @@
 			<div>
 			        <div class="cuisine">
                              North Indian, Salad, Oriental...
-                        <span class="price">₹1,900 for two</span>
+                        <span class="pricef">₹1,900 for two</span>
                         </div>
                           <div class="location">
                              Sakchi,Jamshedpur
@@ -116,7 +2251,7 @@
 		   </div>
 		   </div>
 		   <!--restrau 02-->
-		 <div class ="restraucards" id="r02">
+		 <div class ="restraucards" id="r1" onclick="itemselected(1)">
 		      <img src ="r04.jpg">
 		   <div class="details">
 		       <div class="toprow">
@@ -126,7 +2261,7 @@
 			<div>
 			        <div class="cuisine">
                               North Indian, Mughlai, Biryani...
-                        <span class="price">₹2,500 for two</span>
+                        <span class="pricef">₹2,500 for two</span>
                         </div>
                           <div class="location">
                              Bistupur,Jamshedpur
@@ -139,7 +2274,7 @@
 		   </div>
 		 </div>
 		 <!--restrau 03-->
-		 <div class ="restraucards" id="r03">
+		 <div class ="restraucards" id="r2" onclick="itemselected(2)">
 		 <img src ="r03.jpg">
 		   <div class="details">
 		       <div class="toprow">
@@ -149,7 +2284,7 @@
 			<div>
 			        <div class="cuisine">
                                Coffee, Chinese, Snacks...
-                        <span class="price">₹500 for two</span>
+                        <span class="pricef">₹500 for two</span>
                         </div>
                           <div class="location">
                              Adityapur,Jamshedpur
@@ -165,7 +2300,7 @@
 	 <!--2nd row of restraus-->
 	  <div class="restraugrid" style="margin-top:60px"; >
 	   <!--restrau 04-->
-	       <div class ="restraucards" id ="r04"> 
+	       <div class ="restraucards" id="r3" onclick="itemselected(3)"> 
 		   <img src ="r06.jpg">
 		   <div class="details">
 		       <div class="toprow">
@@ -175,7 +2310,7 @@
 			<div>
 			        <div class="cuisine">
                              North Indian, Oriental, Mocktails...
-                        <span class="price">₹2,100 for two</span>
+                        <span class="pricef">₹2,100 for two</span>
                         </div>
                           <div class="location">
                              Sakchi,Jamshedpur
@@ -188,7 +2323,7 @@
 		   </div>
 		   </div>
 		   <!--restrau 05-->
-		 <div class ="restraucards" id="r05">
+		 <div class ="restraucards" id="r4" onclick="itemselected(4)">
 		      <img src ="r08.jpg">
 		   <div class="details">
 		       <div class="toprow">
@@ -198,7 +2333,7 @@
 			<div>
 			        <div class="cuisine">
                               North Indian, Biryani, South Indian...
-                        <span class="price">₹2,000 for two</span>
+                        <span class="pricef">₹2,000 for two</span>
                         </div>
                           <div class="location">
                              Bistupur,Jamshedpur
@@ -211,17 +2346,17 @@
 		   </div>
 		 </div>
 		 <!--restrau 06-->
-		 <div class ="restraucards" id="r06">
+		 <div class ="restraucards" id="r5" onclick="itemselected(5)">
 		 <img src ="r07.jpg">
 		   <div class="details">
 		       <div class="toprow">
 			    <div class="name">The Ember House</div>
-                     <div class="rating">4.0★</div>
+                     <div class="rating">4.0 ★</div>
 			</div>
 			<div>
 			        <div class="cuisine">
                                Chinese, Mexican, Snacks...
-                        <span class="price">₹1500 for two</span>
+                        <span class="pricef">₹1500 for two</span>
                         </div>
                           <div class="location">
                              Golmuri,Jamshedpur
@@ -234,5 +2369,659 @@
 		   </div>
 		 </div>
 	 </div>
+	  
+	   <!--3rd row of restraus-->
+	  <div class="restraugrid" style="margin-top:60px"; >
+	   <!--restrau 07-->
+	       <div class ="restraucards" id="r6" onclick="itemselected(6)"> 
+		   <img src ="r10.jpg">
+		   <div class="details">
+		       <div class="toprow">
+			    <div class="name">The Opal Lounge</div>
+                     <div class="rating">4.4 ★</div>
+			</div>
+			<div>
+			        <div class="cuisine">
+                             North Indian, Oriental, Mocktails...
+                        <span class="pricef">₹2,500 for two</span>
+                        </div>
+                          <div class="location">
+                             Sakchi,Jamshedpur
+                         </div>
+                         <div class="bottom">
+                             <div class="status">Opens between 11 pm to 9pm</div>
+                             <div class="distance">614 m</div>
+                        </div>
+			</div>
+		   </div>
+		   </div>
+		   <!--restrau 08-->
+		 <div class ="restraucards" id="r7" onclick="itemselected(7)">
+		      <img src ="r11.jpg">
+		   <div class="details">
+		       <div class="toprow">
+			    <div class="name">Saffron Royale</div>
+                     <div class="rating">4.0 ★</div>
+			</div>
+			<div>
+			        <div class="cuisine">
+                              North Indian, Biryani, South Indian...
+                        <span class="pricef">₹2,800 for two</span>
+                        </div>
+                          <div class="location">
+                             Sonari ,Jamshedpur
+                         </div>
+                         <div class="bottom">
+                             <div class="status">Opens between 4 pm to 9pm</div>
+                             <div class="distance">1.5 km</div>
+                        </div>
+			</div>
+		   </div>
+		 </div>
+		 <!--restrau 09-->
+		 <div class ="restraucards" id="r8" onclick="itemselected(8)">
+		 <img src ="r12.jpg">
+		   <div class="details">
+		       <div class="toprow">
+			    <div class="name">Velvet Orchid</div>
+                     <div class="rating">4.3 ★</div>
+			</div>
+			<div>
+			        <div class="cuisine">
+                               Chinese, Mexican, Snacks...
+                        <span class="pricef">₹1500 for two</span>
+                        </div>
+                          <div class="location">
+                             Mango ,Jamshedpur
+                         </div>
+                         <div class="bottom">
+                             <div class="status">Opens between 11 pm to 10pm</div>
+                             <div class="distance">1.2 km</div>
+                        </div>
+			</div>
+		   </div>
+		 </div>
+	 </div>
+	 
+	  
+	 <!--items for food section-->
+	 <div class="foodsection" style="margin-top:60px">
+	       <!-- food item 01 -->
+		    <div class="fooditemcard" id="r9" onclick="itemselected(9)">
+		      <img src="pizza.jpg" >
+			  <div class="fooddetails">
+			   <div class="fdname"> Margherita Supreme </div>
+			   <div class="cuisine" style="font-size:16px;"> Velvet Flame, Bistupur </div>
+			   <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  15-30 mins </div>
+			  <div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn"  > ADD + </button>
+			   <div class="fdprice" > ₹299 </div>
+			  </div>
+			  </div>
+		   </div>
+		   <!-- food item 02 -->
+		    <div class="fooditemcard"id="r10" onclick="itemselected(10)">
+		      <img src="masala_dosa.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname"> Masala Dosa </div>
+			   <div class="cuisine" style="font-size:16px;"> Crimson Table, Sakchi </div>
+			   <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  35-60 mins </div>
+			  <div class ="ratingandprice" style="margin-top:8px;">
+			    <button class="mainbtn"  > ADD + </button>
+			   <div class="fdprice" > ₹159 </div>
+			  </div>
+			  </div>
+		   </div>
+		   <!-- food item 03 -->
+		    <div class="fooditemcard" id="r11" onclick="itemselected(11)">
+		      <img src="momos.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname"> Chicken Momos </div>
+			   <div class="cuisine" style="font-size:16px;"> Velvet Flame, Bistupur </div>
+			  <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  25-30 mins </div>
+			  <div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn" > ADD + </button>
+			  <div class="fdprice" > ₹199 </div>
+			  </div>
+			   </div>
+			  
+		   </div>
+		   <!-- food item 04 -->
+		   <div class="fooditemcard"id="r12" onclick="itemselected(12)">
+		      <img src="biryani.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname"> Chicken Biryani </div>
+			   <div class="cuisine" style="font-size:16px;"> Aurum Dining, Bistupur</div>
+			  <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  15-20 mins </div>
+			  <div class ="ratingandprice" style="margin-top:8px;">
+			    <button class="mainbtn" > ADD + </button>
+			   <div class="fdprice" > ₹349 </div>
+			  </div>
+			  </div>
+		   </div>
+	 </div>
+	 
+	 <!--Sale items -->
+	 
+	  <div class="foodsection" style="margin-top:60px">
+	       <!-- food item 01 -->
+		     <div class="fooditemcard" id="r13" onclick="itemselected(13)">
+		      <img src="s01.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname">  Chicken Chowmein </div>
+			   <div class="cuisine" style="font-size:16px;"> Velvet Flame, Bistupur </div>
+			  <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  25-30 mins </div>
+			  <div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn"  > ADD + </button>
+			  <div class="fdprice" > ₹129 </div>
+			  </div>
+			   </div>
+		   </div>
+		   <!-- food item 02 -->
+		   <div class="fooditemcard" id="r14" onclick="itemselected(14)">
+		      <img src="s02.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname">BBQ Beast Burger</div>
+			   <div class="cuisine" style="font-size:16px;"> Aurum Dining, Bistupur</div>
+			  <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  15-20 mins </div>
+			<div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn" > ADD + </button>
+			  <div class="fdprice" > ₹199 </div>
+			  </div>
+			  </div>
+		   </div>
+		   <!-- food item 03 -->
+		   <div class="fooditemcard" id="r15" onclick="itemselected(15)">
+		      <img src="s03.jpg" >
+			  <div class="fooddetails">
+			   <div class="fdname"> Chole Bhature </div>
+			   <div class="cuisine" style="font-size:16px;"> Velvet Flame, Bistupur </div>
+			   <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  15-30 mins </div>
+			   <div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn" > ADD + </button>
+			  <div class="fdprice" > ₹159 </div>
+			  </div>
+			  </div>
+		   </div>
+		   <!-- food item 04 -->
+		   <div class="fooditemcard" id="r16" onclick="itemselected(16)">
+		      <img src="s04.jpg" >
+			    <div class="fooddetails">
+			   <div class="fdname">Belgian Choco Bliss</div>
+			   <div class="cuisine" style="font-size:16px;"> Crimson Table, Sakchi </div>
+			   <div class="cuisine" style="font-size:16px;color:#888;"> Delivery Time |  35-60 mins </div>
+			   <div class ="ratingandprice" style="margin-top:8px;">
+			      <button class="mainbtn"  > ADD + </button>
+			  <div class="fdprice" > ₹399 </div>
+			  </div>
+			  </div>
+		   </div>
+	 </div>
+	 <!--div for restrau menu items -->
+	 
+	  <div class="restraurants" id ="menuitems" style="margin-top:210px;">  <!-- Grid where all food items will show-->
+	        <!--food item 01-->
+		      <div class="restrausize" id="d0" >
+			      <div class="restrauname" id="fname0">   </div>
+				   <div class="innerdetails">
+					<div class="description" id="fdesc0"></div>
+				     </div>
+					 <div class="price" id="foodprice0"> </div>
+					 <button class="btn" onclick="showqty(0),billingitems(0)" id="addbtn0"> ADD </button> 
+					 <div class="quantitybox" id="qtybox0">
+					       <button class="btnminus" onclick="decrease(0), bill()" id="minusbtn">-</button>
+                          <button class="btnqnt" id="lblqty0">0</button>
+						  <button class="btnplus"  onclick="increase(0), bill()" id ="addbtn">+</button>
+					 </div>
+					 <img id="img0" class="imagecss">
+			  </div>
+			  
+			  <!--food item 02-->
+			   <div class="restrausize" id="d1" >
+			     <div class="restrauname" id="fname1"> </div>
+				   <div class="innerdetails">
+					 <div class="description" id="fdesc1"></div>
+				     </div>
+					  <div class="price" id="foodprice1"> </div>
+					 <button class="btn" onclick="showqty(1),billingitems(1)" id="addbtn1"> ADD </button>
+					 <div class="quantitybox" id="qtybox1">
+					 <button class="btnminus" onclick="decrease(1), bill()" id="btnmi">-</button>
+                      <button class="btnqnt" id="lblqty1">0</button>
+					  <button class="btnplus"  onclick="increase(1), bill()" id ="btnpl">+</button>
+						  
+					 </div>
+					 <img id="img1" class="imagecss">
+			  </div>
+			  
+			  <!--food item 03-->
+			   <div class="restrausize" id="d2" >
+			      <div class="restrauname" id="fname2"> 
+				      sv
+				  </div>
+				   <div class="innerdetails">
+					<div class="description" id="fdesc2"></div>
+				     </div>
+					  <div class="price" id="foodprice2"> </div>
+					 <button class="btn" onclick="showqty(2),billingitems(2)" id="addbtn2"> ADD </button>
+					 <div class="quantitybox" id="qtybox2">
+					      <button class="btnminus" onclick="decrease(2), bill()">-</button>
+                          <button class="btnqnt" id="lblqty2">0</button>
+						   <button class="btnplus"  onclick="increase(2), bill()">+</button>
+					 </div>
+					 <img id="img2" class="imagecss">
+			  </div>
+			  
+			  <!--food item 04-->
+			   <div class="restrausize" id="d3" >
+			      <div class="restrauname" id="fname3"> 
+				    
+				  </div>
+				   <div class="innerdetails">
+					<div class="description" id="fdesc3"></div>
+				     </div>
+					  <div class="price" id="foodprice3"> </div>
+					  <button class="btn" onclick="showqty(3),billingitems(3)" id="addbtn3"> ADD </button>
+					 <div class="quantitybox" id="qtybox3">
+                          <button class="btnminus" onclick="decrease(3), bill()">-</button>
+                          <button class="btnqnt" id="lblqty3">0</button>
+						  <button class="btnplus"  onclick="increase(3), bill()">+</button>
+						  
+					 </div>
+					 <img id="img3" class="imagecss">
+			  </div>
+			  
+			  <!--food item 05-->
+			   <div class="restrausize" id="d4" >
+			      <div class="restrauname" id="fname4">
+				    
+				  </div>
+				   <div class="innerdetails">
+					 <div class="description" id="fdesc4"></div>
+				     </div>
+					  <div class="price" id="foodprice4"> </div>
+					<button class="btn" onclick="showqty(4),billingitems(4)" id="addbtn4"> ADD </button>
+					 <div class="quantitybox" id="qtybox4">
+                          <button class="btnminus" onclick="decrease(4), bill()">-</button>
+                          <button class="btnqnt" id="lblqty4">0</button>
+						  <button class="btnplus"  onclick="increase(4), bill()">+</button>
+						  
+					 </div>
+					 <img id="img4" class="imagecss">
+			  </div>
+			  
+			  <!--food item 06-->
+			   <div class="restrausize" id="d5" >
+			      <div class="restrauname" id="fname5"> 
+				    
+				  </div>
+				   <div class="innerdetails">
+					 <div class="description" id="fdesc5"></div>
+				     </div>
+					  <div class="price" id="foodprice5"> </div>
+					 <button class="btn" onclick="showqty(5),billingitems(5)" id="addbtn5"> ADD </button>
+					 <div class="quantitybox" id="qtybox5">
+                          <button class="btnminus" onclick="decrease(5), bill()">-</button>
+                          <button class="btnqnt" id="lblqty5">0</button>
+						   <button class="btnplus"  onclick="increase(5), bill()">+</button>
+						 
+					 </div>
+					 <img id="img5" class="imagecss">
+			  </div>
+			  
+			  <!--food item 07-->
+			   <div class="restrausize" id="d6" >
+			      <div class="restrauname" id="fname6"> 
+				    
+				  </div>
+				   <div class="innerdetails">
+					 <div class="description" id="fdesc6"></div>
+				     </div>
+					  <div class="price" id="foodprice6"> </div>
+					<button class="btn" onclick="showqty(6),billingitems(6)" id="addbtn6"> ADD </button>
+					 <div class="quantitybox" id="qtybox6">
+                         <button class="btnminus" onclick="decrease(6), bill()">-</button>
+                          <button class="btnqnt" id="lblqty6">0</button>
+						   <button class="btnplus"  onclick="increase(6), bill()">+</button>
+						  
+					 </div>
+					 <img id="img6" class="imagecss">
+			  </div>
+			  
+			  <!-- code for billing system-->
+			  <div class="billcard"  onclick="bill(); cartf();" id ="billcardid"> 
+			  <div class="fontposition"> CHEAK CART </div>
+			   <img src="cart01.png" height="90px" style="position:relative; left:-34px;top:0px;">
+			  </div>
+		</div>	
+	     <!--cart code-->
+		   			  <div id="billwrapper">
+			     
+				  
+
+<table id="table01" class="billtable">
+
+    <tr id="billHeader">
+        <td>Sl No</td>
+        <td>Item Name</td>
+        <td>Qty</td>
+        <td>Price</td>
+    </tr>
+
+    <tr id="billRow0">
+        <td id="billSl0"></td>
+        <td id="billName0"></td>
+        <td id="billQty0"></td>
+        <td id="billPrice0"></td>
+    </tr>
+
+    <tr id="billRow1">
+        <td id="billSl1"></td>
+        <td id="billName1"></td>
+        <td id="billQty1"></td>
+        <td id="billPrice1"></td>
+    </tr>
+
+    <tr id="billRow2">
+        <td id="billSl2"></td>
+        <td id="billName2"></td>
+        <td id="billQty2"></td>
+        <td id="billPrice2"></td>
+    </tr>
+
+    <tr id="billRow3">
+        <td id="billSl3"></td>
+        <td id="billName3"></td>
+        <td id="billQty3"></td>
+        <td id="billPrice3"></td>
+    </tr>
+
+    <tr id="billRow4">
+        <td id="billSl4"></td>
+        <td id="billName4"></td>
+        <td id="billQty4"></td>
+        <td id="billPrice4"></td>
+    </tr>
+
+    <tr id="billRow5">
+        <td id="billSl5"></td>
+        <td id="billName5"></td>
+        <td id="billQty5"></td>
+        <td id="billPrice5"></td>
+    </tr>
+
+    <tr id="billRow6">
+        <td id="billSl6"></td>
+        <td id="billName6"></td>
+        <td id="billQty6"></td>
+        <td id="billPrice6"></td>
+    </tr>
+
+    <tr id="deliveryRow">
+        <td id="deliveryLabel" style="font-weight:600">
+            Delivery fee per km
+        </td>
+        <td></td>
+        <td></td>
+        <td id="deliveryCharge"></td>
+    </tr>
+
+    <tr id="platformRow">
+        <td id="platformLabel" style="font-weight:600">
+            Platform fee
+        </td>
+        <td></td>
+        <td></td>
+        <td id="platformCharge"></td>
+    </tr>
+
+    <tr id="packingRow">
+        <td id="packingLabel" style="font-weight:600">
+            Packing Charge
+        </td>
+        <td></td>
+        <td></td>
+        <td id="packingCharge"></td>
+    </tr>
+
+    <tr id="gstRow">
+        <td id="gstLabel" style="font-weight:600">
+            GST
+        </td>
+        <td></td>
+        <td></td>
+        <td id="gstAmount"></td>
+    </tr>
+
+    <tr id="totalRow">
+        <td id="totalLabel">
+            Total Bill
+        </td>
+        <td></td>
+        <td></td>
+        <td id="totalBill"></td>
+    </tr>
+
+</table>
+
+<!--code for procced to payment and explore options-->
+
+<div class="bill-actions" id ="hhh" >
+
+    <div class="explore-more" >
+        <div>
+            <h3>Explore More</h3>
+            <p>Add desserts, drinks or sides to your order.</p>
+        </div>
+
+        <button id="exploreBtn">
+            Browse Menu
+        </button>
+    </div>
+
+    <button id="paymentBtn" onclick="adddetails()">
+        Place Order
+    </button>
+
+</div>
+
+<!--delivery details -->
+<div id="deliveryBox">
+
+    <h2>🚚 Delivery Details</h2>
+
+    <div class="row">
+        <div class="field">
+            <label>Full Name</label>
+            <input type="text" id="name">
+        </div>
+
+        <div class="field">
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+        </div>
+    </div>
+
+    <div class="field">
+        <label>Delivery Address</label>
+        <textarea id="address"></textarea>
+    </div>
+
+    <div class="field">
+        <label>Special Instructions</label>
+        <input type="text" id="instruction">
+    </div>
+
+    <div class="btns">
+        <button id="backBtn">Back</button>
+        <button id="saveBtn" onclick="saveDelivery()">
+            Choose Payment
+        </button>
+    </div>
+
+</div>
+
+<!--Payment Option -->
+
+<div id="paymentBox">
+
+    <h2>💳 Choose Payment Method</h2>
+    <p class="subtitle">
+        Select how you'd like to pay for your order
+    </p>
+
+    <!-- Online Payment -->
+    <div class="payment-card" onclick="selectPayment('online')">
+
+        <div class="icon online-icon">
+            📱
+        </div>
+
+        <div class="payment-info">
+            <h3>
+                Pay Online
+                <span class="tag">Recommended</span>
+            </h3>
+
+            <p>
+                Scan & pay via UPI — GPay, PhonePe, Paytm or any UPI app
+            </p>
+
+            <div class="upi-list">
+                <span>GPay</span>
+                <span>PhonePe</span>
+                <span>Paytm</span>
+                <span>BHIM</span>
+            </div>
+        </div>
+
+        <div class="arrow">❯</div>
+
+    </div>
+
+    <!-- COD -->
+    <div class="payment-card" onclick="selectPayment('cod')">
+
+        <div class="icon cod-icon">
+            💵
+        </div>
+
+        <div class="payment-info">
+            <h3>Cash on Delivery</h3>
+
+            <p>
+                Pay in cash when your order arrives at your door
+            </p>
+        </div>
+
+        <div class="arrow">❯</div>
+
+    </div>
+
+    <button id="backPayment">
+        Back to Details
+    </button>
+
+</div>
+
+<!--scanner-->
+
+<div id="upiBox">
+
+    <div class="upi-header">
+        <h2>📱 Scan to Pay</h2>
+        
+    </div>
+
+    <div class="qr-section" >
+
+        <div class="qr-card">
+            <img src="abc.png" id="qrImage">
+        </div>
+        <div class="upi-id-card">
+            <span>UPI ID</span>
+            <h3>biterush@upi</h3>
+            <p>BiteRush</p>
+        </div>
+
+    </div>
+
+    <div class="howto-box">
+
+        <h3>How to pay:</h3>
+
+        <div class="step">
+            <span>1</span>
+            Open GPay, PhonePe, Paytm or any UPI app
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            Tap "Scan QR" and point your camera here
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            Confirm the amount and complete payment
+        </div>
+
+        <div class="step">
+            <span>4</span>
+            Tap "I have paid" below to confirm your order
+        </div>
+
+    </div>
+
+    <button id="paidBtn" onclick="paidf()" >
+        ✓ I have paid — Confirm Order
+    </button>
+
+</div>
+
+</div>
+			
+	 
+	 <!--footer-->
+	 <div class="footer" style="margin-top:50px;">
+	       <footer class="footer">
+
+    <div class="footergrid">
+
+        <div>
+            <h3>BiteRush</h3>
+            <p>Fresh food delivered to your doorstep.</p>
+        </div>
+
+        <div>
+            <h4>Company</h4>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Contact Us</p>
+        </div>
+
+        <div>
+            <h4>Services</h4>
+            <p>Food Delivery</p>
+            <p>Restaurant Partners</p>
+            <p>Track Orders</p>
+        </div>
+
+        <div>
+            <h4>Legal</h4>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footerbottom">
+        © 2026 BiteRush. All Rights Reserved.
+    </div>
+
+</footer>
+	 </div>
+	 
+	
 </body>
 </html>
