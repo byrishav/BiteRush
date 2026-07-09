@@ -1652,6 +1652,332 @@ margin-left:90px;
         transform:translateX(0);
     }
 }
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* ---------- NAVBAR ---------- */
+  .searchbar{
+    flex-wrap:wrap;
+    padding:14px 16px;
+    min-height:auto;
+    row-gap:12px;
+  }
+  .logo{
+    font-size:30px;
+  }
+  .logo::before{
+    font-size:30px;
+    top:-3px;
+  }
+  .searchb{
+    order:3;
+    width:100%;
+    padding:0;
+    flex:1 1 100%;
+  }
+  .searchf{
+    max-width:100%;
+    height:46px;
+  }
+  .authbox{
+    gap:8px;
+  }
+  .loginbtn,
+  .loginbtn1{
+    padding:0 14px;
+    height:40px;
+    font-size:13px;
+  }
+  .cartbtn img{
+    height:42px;
+  }
+
+  /* ---------- BANNER ---------- */
+  .banner{
+    width:94%;
+    height:180px;
+    margin:16px auto;
+    border-radius:14px;
+  }
+
+  /* ---------- SELECTED RESTAURANT HERO ---------- */
+  .selectedrestrau{
+    width:94%;
+    margin:16px auto;
+    border-radius:18px;
+  }
+  #restrauimg{
+    height:190px;
+  }
+  .srtoprow{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .selectedname{
+    font-size:26px;
+    letter-spacing:-1px;
+  }
+  .srrating{
+    font-size:16px;
+    padding:4px 14px 5px 18px;
+  }
+  .srcuisine{
+    flex-direction:column;
+    font-size:14px;
+    max-width:100%;
+    gap:4px;
+  }
+  .srlocation{
+    font-size:14px !important;
+  }
+  .srbottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px;
+  }
+  .srdistance{
+    position:static;         /* was absolute left:1060px — breaks mobile */
+    left:auto;
+  }
+
+  /* ---------- RESTAURANT GRID ---------- */
+  .restraugrid{
+    grid-template-columns:1fr;
+    gap:20px;
+    width:94%;
+    max-width:100%;
+  }
+  .restraucards img{
+    height:190px;
+  }
+  .name{
+    font-size:21px;
+  }
+
+  /* ---------- POPULAR / SALE FOOD SECTION ---------- */
+  .foodsection{
+    grid-template-columns:repeat(2,1fr);
+    width:94%;
+    gap:14px;
+  }
+  .fooditemcard img{
+    height:140px;
+  }
+  .fdname{
+    font-size:17px;
+  }
+  .mainbtn{
+    padding:4px 18px;
+    font-size:13px;
+  }
+  .fdprice{
+    font-size:14px;
+    padding:5px 10px;
+  }
+
+  /* ---------- MENU ITEM CARDS (restrausize) ---------- */
+  /* Desktop uses big fixed margin-left + absolute image/price/button.
+     On mobile we switch to a simple stacked flex layout. */
+  #menuitems{
+    margin-top:24px !important;
+    width:94%;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .restrausize{
+    width:100%;
+    min-height:auto;
+    display:flex;
+    flex-direction:column;
+    padding:14px;
+    box-sizing:border-box;
+  }
+  .imagecss{
+    position:static;
+    width:100%;
+    height:170px;
+    border-radius:14px;
+    order:-1;               /* image on top */
+    margin-bottom:12px;
+  }
+  .restrauname{
+    margin-left:0;
+    top:0;
+    left:0;
+    font-size:22px;
+  }
+  .innerdetails{
+    margin-left:0;
+    margin-top:10px;
+  }
+  .description{
+    max-width:100%;
+  }
+  .price{
+    position:static;
+    font-size:26px;
+    margin-top:10px;
+  }
+  .btn{
+    position:static;
+    transform:none;
+    width:100%;
+    margin-top:12px;
+    padding:12px;
+    font-size:16px;
+  }
+  .btn:hover{
+    transform:none;
+  }
+  .quantitybox{
+    position:static;
+    display:none;            /* JS toggles this to flex when shown */
+    width:100%;
+    margin-top:12px;
+    justify-content:center;
+  }
+  .btnplus, .btnqnt, .btnminus{
+    transform:none;
+    top:0;
+    left:0;
+    padding:10px 16px;
+  }
+
+  /* ---------- CART / BILL ---------- */
+  .billcard{
+    width:150px;
+    height:60px;
+    bottom:16px;
+    right:16px;
+  }
+  .fontposition{
+    font-size:14px;
+    margin-left:6px;
+  }
+  .billcard img{
+    height:55px !important;
+  }
+
+  #billwrapper{
+    height:auto;
+  }
+  .billtable{
+    position:static;         /* was absolute left:890px */
+    left:auto;
+    top:auto;
+    width:94%;
+    max-width:100%;
+    margin:16px auto;
+  }
+  .billtable td{
+    padding:10px 8px;
+    font-size:13px;
+  }
+
+  .bill-actions{
+    width:94%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .explore-more{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+  #exploreBtn{
+    width:100%;
+  }
+  #paymentBtn{
+    height:60px;
+    font-size:18px;
+  }
+
+  /* ---------- DELIVERY / PAYMENT / UPI BOXES ---------- */
+  #deliveryBox,
+  #paymentBox,
+  #upiBox{
+    width:94%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:18px;
+  }
+  .qr-card{
+    width:200px;
+  }
+  #qrImage{
+    height:160px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    padding:20px 6% 20px;
+  }
+  .footergrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+}
+
+
+/* =========================================================
+   PHONE  (<= 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+
+  .logo{
+    font-size:24px;
+  }
+  .logo::before{
+    font-size:24px;
+  }
+  .authbox{
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+  .loginbtn{
+    display:none;             /* hide secondary "Login" button to save space */
+  }
+
+  .banner{
+    height:140px;
+  }
+
+  .selectedname{
+    font-size:21px;
+  }
+
+  .foodsection{
+    grid-template-columns:1fr;  /* single column on very small screens */
+  }
+
+  .restrauname{
+    font-size:19px;
+  }
+  .price{
+    font-size:22px;
+  }
+  .imagecss{
+    height:140px;
+  }
+
+  .footergrid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .billcard{
+    width:130px;
+    height:52px;
+  }
+  .fontposition{
+    font-size:12px;
+  }
+}
 </style>
 <script>
 
